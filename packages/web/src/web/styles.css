@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-bg: #000000;
+  --color-card: #2a2a2a;
+  --color-card-dark: #1a1a1a;
+  --color-purple: #a855f7;
+  --color-cyan: #06b6d4;
+  --color-gold: #f59e0b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Gradient utilities */
+.gradient-text {
+  background: linear-gradient(90deg, #a855f7 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, #a855f7 0%, #06b6d4 100%);
+}
+
+.gradient-border {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  background-image: linear-gradient(#000, #000), linear-gradient(90deg, #a855f7, #06b6d4);
+  background-origin: border-box;
+}
+
+/* Glass effects */
+.glass-nav {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(42, 42, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Glow effects */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4), 0 0 40px rgba(245, 158, 11, 0.1);
+}
+
+.purple-glow {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.cyan-glow {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Gold Spark pulse animation */
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); }
+}
+
+.gold-spark-ring {
+  animation: gold-pulse 2s ease-in-out infinite;
+}
+
+/* Guardian alert pulse */
+@keyframes safety-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.safety-pulse {
+  animation: safety-pulse 1.2s ease-in-out infinite;
+}
+
+/* Discovery card swipe */
+.discovery-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: grab;
+}
+
+.discovery-card:active {
+  cursor: grabbing;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 2px; }
+
+/* Page fade-in */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeSlideUp 0.4s ease forwards;
+}
+
+/* Gradient background mesh */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    #000000;
+}
