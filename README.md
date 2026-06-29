@@ -110,7 +110,7 @@ bun --env-file=.env packages/web/src/server.ts
 3. **Build Settings**:
    - Build Pack: `Dockerfile`
    - Dockerfile: `./Dockerfile`
-   - Port: `3000`
+   - Port: `3020`
 
 4. **Environment Variables** → Add all from `.env.example`:
    ```
@@ -121,7 +121,7 @@ bun --env-file=.env packages/web/src/server.ts
    STRIPE_WEBHOOK_SECRET=whsec_...
    OPENROUTER_API_KEY=sk-or-v1-...
    VITE_APP_URL=https://your-domain.com
-   PORT=3000
+   PORT=3020
    ```
 
 5. **Deploy** → Coolify builds and starts the container

@@ -4,7 +4,7 @@ import app from "./api";
 import { db } from "./api/database";
 import { messages } from "./api/database/schema";
 
-const port = Number(process.env.PORT ?? 3000);
+const port = Number(process.env.PORT ?? 3020);
 const distDir = `${import.meta.dir}/../dist`;
 const indexPath = `${distDir}/index.html`;
 

@@ -29,6 +29,6 @@ COPY --from=builder /app/packages/web/src ./packages/web/src
 COPY --from=builder /app/packages/web/dist ./packages/web/dist
 COPY --from=builder /app/.env.example ./.env.example
 
-EXPOSE 3000
+EXPOSE 3020
 
 CMD ["bun", "packages/web/src/server.ts"]
