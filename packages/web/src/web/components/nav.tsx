@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { href: "/meetups", label: "Meetups" },
   { href: "/chat", label: "Chat" },
   { href: "/guardian", label: "Guardian" },
+  { href: "/spark-wallet", label: "⚡ Wallet" },
 ];
 
 export function Nav() {

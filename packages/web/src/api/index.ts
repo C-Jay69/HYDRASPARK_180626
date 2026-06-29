@@ -13,6 +13,7 @@ import { adminRoutes } from "./routes/admin";
 import { paymentsRoutes } from "./routes/payments";
 import { verificationRoutes } from "./routes/verification";
 import { virtualDateRoutes } from "./routes/virtual-date";
+import { sparkRoutes } from "./routes/spark";
 import { VIBE_QUESTIONS } from "./lib/vibe-score";
 
 const app = new Hono().basePath("/api");
@@ -59,6 +60,7 @@ app.route("/admin", adminRoutes);
 app.route("/payments", paymentsRoutes);
 app.route("/verification", verificationRoutes);
 app.route("/virtual-date", virtualDateRoutes);
+app.route("/spark", sparkRoutes);
 
 export default app;
 export type AppType = typeof app;

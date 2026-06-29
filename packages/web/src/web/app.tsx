@@ -35,6 +35,7 @@ import AdminVerification from "./pages/admin/AdminVerification";
 import MarshalDashboard from "./pages/marshal/MarshalDashboard";
 import OrganiserDashboard from "./pages/organiser/OrganiserDashboard";
 import AttendeeDashboard from "./pages/attendees/AttendeeDashboard";
+import SparkWallet from "./pages/SparkWallet";
 
 function App() {
   return (
@@ -85,6 +86,9 @@ function App() {
         <Route path="/admin/users" component={AdminUsers} />
         <Route path="/admin/revenue" component={AdminRevenue} />
         <Route path="/admin/verification" component={AdminVerification} />
+
+        {/* Spark Wallet */}
+        <Route path="/spark-wallet" component={SparkWallet} />
 
         {/* Roles */}
         <Route path="/marshal" component={MarshalDashboard} />
